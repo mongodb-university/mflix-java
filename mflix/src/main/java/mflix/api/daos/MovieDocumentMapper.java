@@ -34,6 +34,7 @@ public class MovieDocumentMapper {
     try {
       movie.setId(document.getObjectId("_id").toHexString());
       movie.setTitle(MessageFormat.format("{0}", document.get("title")));
+      movie.setYear(document.getInteger("year"));
       movie.setCast((List<String>) document.get("cast"));
       movie.setPlog(document.getString("plot"));
       movie.setFullPlot(document.getString("fullplot"));
