@@ -185,7 +185,7 @@ public class MoviesService {
     result.put("movies_list", movieList);
 
     if (page == 0) {
-      result.put("movies_count", movieDao.getCastSearchCount(genres));
+      result.put("movies_count", movieDao.getGenresSearchCount(genres));
     }
     return result;
   }
